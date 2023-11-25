@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ang-mat-learn": {
+    "angular-material-learn": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ang-mat-learn",
+            "outputPath": "dist/angular-material-learn",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ang-mat-learn:build:production"
+              "buildTarget": "angular-material-learn:build:production"
             },
             "development": {
-              "buildTarget": "ang-mat-learn:build:development"
+              "buildTarget": "angular-material-learn:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ang-mat-learn:build"
+            "buildTarget": "angular-material-learn:build"
           }
         },
         "test": {

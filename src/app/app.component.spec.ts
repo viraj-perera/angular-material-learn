@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ang-mat-learn'`, () => {
+  it(`should have as title 'angular-material-learn'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ang-mat-learn');
+    expect(app.title).toEqual('angular-material-learn');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ang-mat-learn');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-material-learn');
   });
 });
