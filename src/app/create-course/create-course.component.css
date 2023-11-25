@@ -1,0 +1,18 @@
+.create-course-panel {
+    padding-top: 20px;
+    width: 800px;
+    margin: auto;
+}
+
+
+h2 {
+    font-family: "Roboto";
+}
+
+.stepper-buttons {
+    margin-top: 10px;
+}
+
+.stepper-buttons button {
+    margin-right: 10px;
+}

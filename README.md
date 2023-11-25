@@ -1,6 +1,6 @@
 # AngMatLearn
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1. This is an example project which demostrates the use of angular-material 17 features.
 
 ## Development server
 

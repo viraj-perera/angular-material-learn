@@ -1,0 +1,21 @@
+<div class="create-course-panel">
+    <h2 class="title">Create New Course</h2>'
+    
+    <mat-horizontal-stepper [linear]="true" labelPosition="bottom">
+        <mat-step errorMessage="Course details are not valid.">
+            <ng-template matStepLabel>Course Details</ng-template>
+            <app-create-course-step-1></app-create-course-step-1>
+            <div class="stepper-buttons">
+                <button mat-raised-button color="primary" matStepperNext>Add Lessons</button>
+            </div>
+        </mat-step>
+        <mat-step errorMessage="Lesson details are not valid.">
+            <ng-template matStepLabel>Lesson Details</ng-template>
+            <app-create-course-step-2></app-create-course-step-2>
+            <div class="stepper-buttons">
+                <button mat-raised-button matStepperPrevious>Back</button>
+                <button mat-raised-button color="accent">Create Course</button>
+            </div>
+        </mat-step>
+    </mat-horizontal-stepper>
+</div>
