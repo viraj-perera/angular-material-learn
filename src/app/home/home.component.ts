@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CourseService } from '../services/course-service.service';
+import { CourseService } from '../services/course.service';
 import { Observable, map } from 'rxjs';
 import { Course } from '../shared/course.model';
 
@@ -16,18 +16,35 @@ export class HomeComponent implements OnInit {
 
   constructor(private courseService: CourseService){}
 
+  // ngOnInit(): void {
+  //   const allCourses$ = this.courseService.getAllCourses();
+    
+  //   this.beginnerCourses$ = allCourses$.pipe(
+  //     map(courses => {
+  //       return courses.filter((course:Course) =>{ return course.type === "beginner"});
+  //     })
+  //   );
+
+  //   this.advancedCourses$ = allCourses$.pipe(
+  //     map(courses => {
+  //       return courses.filter((course:Course) =>{ return course.type === "advanced"});
+  //     })
+  //   );
+  // }
+
+
   ngOnInit(): void {
-    const allCourses$ = this.courseService.getAllCourses();
+    const allCourses$ = this.courseService.findAllCourses();
     
     this.beginnerCourses$ = allCourses$.pipe(
       map(courses => {
-        return courses.filter((course:Course) =>{ return course.type === "beginner"});
+        return courses.filter((course:Course) =>{ return course.category === "BEGINNER"});
       })
     );
 
     this.advancedCourses$ = allCourses$.pipe(
       map(courses => {
-        return courses.filter((course:Course) =>{ return course.type === "advanced"});
+        return courses.filter((course:Course) =>{ return course.category === "ADVANCED"});
       })
     );
   }

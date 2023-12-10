@@ -1,11 +1,11 @@
-<mat-card class="mat-mdc-elevation-specific mat-elevation-z7" *ngFor="let course of courses; index as idx;">
+<mat-card class="mat-mdc-elevation-specific mat-elevation-z8" *ngFor="let course of courses; index as idx;">
     <mat-card-header>
-        <mat-card-title>{{course.title}}</mat-card-title>
+        <mat-card-title>{{course.description}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image [src]="course.imgUrl" width="450px;">
-    <mat-card-content>{{course.description}}</mat-card-content>
+    <img mat-card-image [src]="course.iconUrl" width="450px;">
+    <mat-card-content>{{course.longDescription}}</mat-card-content>
     <mat-card-actions>
-        <button mat-raised-button color="primary" [routerLink]="['courses', idx]" class="course-card-btn">View Course</button>
+        <button mat-raised-button color="primary" [routerLink]="['courses', course.id]" class="course-card-btn">View Course</button>
         <button mat-raised-button color="accent" (click)="editCourse(course)" class="course-card-btn">Edit Course</button>
     </mat-card-actions>
     

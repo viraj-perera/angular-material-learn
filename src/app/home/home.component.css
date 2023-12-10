@@ -1,5 +1,7 @@
 .courses-panel {
-  margin: 10px 10px 10px 10px;
+  padding-top: 20px;
+  width: 500px;
+  margin: auto;
 }
 .header {
   display: flex;
