@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+button.highlight-date {
+  background: orange;
+  border-radius: 100%;
+}
+.mat-mdc-paginator {
+  width: 600px;
+  /* padding-bottom: 10px;
+  margin-bottom: 100px; */
+}
