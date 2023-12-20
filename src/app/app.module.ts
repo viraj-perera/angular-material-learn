@@ -26,6 +26,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule } from "@angular/material/sort";
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { CourseCardListComponent } from './course-card-list/course-card-list.com
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { CreateCourseStep1Component } from './create-course/create-course-step-1/create-course-step-1.component';
 import { CreateCourseStep2Component } from './create-course/create-course-step-2/create-course-step-2.component';
+import { CourseDialogComponent } from './course-dialog/course-dialog.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { CreateCourseStep2Component } from './create-course/create-course-step-2
     CourseCardListComponent,
     CreateCourseComponent,
     CreateCourseStep1Component,
-    CreateCourseStep2Component
+    CreateCourseStep2Component,
+    CourseDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,8 @@ import { CreateCourseStep2Component } from './create-course/create-course-step-2
     MatTableModule,
     MatProgressSpinnerModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
