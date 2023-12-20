@@ -1,0 +1,50 @@
+<div class="edit-course">
+  <h2 mat-dialog-title>{{ description }}</h2>
+
+  <mat-dialog-content [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Course Description</mat-label>
+      <input matInput formControlName="description" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Select a category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="beginner">Beginner</mat-option>
+        <mat-option value="inter">Intermediate</mat-option>
+        <mat-option value="advanced">Advanced</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="releasedAtPicker"
+        formControlName="releasedAt"
+      />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="releasedAtPicker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #releasedAtPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea
+        matInput
+        formControlName="longDescription"
+        cdkTextareaAutosize
+        #autosize="cdkTextareaAutosize"
+        cdkAutosizeMinRows="3"
+        cdkAutosizeMaxRows="5"
+      ></textarea>
+    </mat-form-field>
+
+    <mat-dialog-actions>
+      <button mat-raised-button (click)="close()">Close</button>
+      <button mat-raised-button (click)="save()" color="primary">Save</button>
+    </mat-dialog-actions>
+  </mat-dialog-content>
+</div>
